@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#nav>li{
+			width: 125px;
+			text-align: center;
+			margin-left: 30px;
+			float: left;
+		}
+		#nav .subnav{
+			display: none;
+			width: 125px;
+		}
+		#nav .subnav>li{
+			margin-top: 5px;
+			line-height: 30px;
+			height: 30px;
+			border: 1px solid #000;
+		}
+	</style>
+	<script type="text/javascript">
+		function show(li){
+			var show = li.getElementsByTagName("ul")[0];
+			show.style.display = "block";
+		}
+		function hide(li){
+			var show = li.getElementsByTagName("ul")[0];
+			show.style.display = "none";
+		}
+	</script>
+</head>
+<body>
+	<ul id="nav">
+		<li onmouseover="show(this)" onmouseout="hide(this)">Weapon
+			<ul class="subnav">
+				<li>Claymore</li>
+				<li>Dragon Killer</li>
+				<li>Eten</li>
+				<li>Dark Clouds</li>
+			</ul>
+		</li>
+		<li onmouseover="show(this)" onmouseout="hide(this)">Armor
+			<ul class="subnav">
+				<li>Cuirass</li>
+				<li>Helm</li>
+				<li>Nipper</li>
+				<li>Leg Guard</li>
+			</ul>
+		</li>
+		<li onmouseover="show(this)" onmouseout="hide(this)">Hero
+			<ul class="subnav">
+				<li>Master</li>
+				<li>Warrior</li>
+				<li>Acher</li>
+				<li>Summoner</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
